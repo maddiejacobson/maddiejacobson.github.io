@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maddie Jacobson — Brand Strategist</title>
+<meta property="og:title" content="Maddie Jacobson — Brand Strategist">
+<meta property="og:description" content="Brand strategist born in social. Translating culture into insights brands can actually use.">
+<meta property="og:image" content="https://i.imgur.com/kYZ3rCW.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://i.imgur.com/kYZ3rCW.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #FAF8F5;
+    --ink: #222222;
+    --ink-soft: #555555;
+    --ink-muted: #999999;
+    --terracotta: #F4511E;
+    --terracotta-light: #FDE8E2;
+    --border: rgba(34,34,34,0.12);
+    --serif: 'Syne', system-ui, sans-serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.7;
+    font-weight: 300;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 3rem;
+    background: var(--cream);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .nav-name {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-name:hover { color: var(--terracotta); }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--terracotta); }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 3rem 5rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .hero-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+
+  .hero-name {
+    font-family: var(--serif);
+    font-size: clamp(3.5rem, 9vw, 8rem);
+    line-height: 0.92;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    margin-bottom: 2.5rem;
+    font-weight: 800;
+  }
+
+  .hero-name em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .hero-descriptor {
+    max-width: 560px;
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    border-left: 2px solid var(--terracotta);
+    padding-left: 1.25rem;
+    font-weight: 400;
+  }
+
+  .hero-image-wrap {
+    margin-top: 2.5rem;
+    width: 280px;
+    height: 350px;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-image-placeholder {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: var(--terracotta-light);
+    border: 1px dashed var(--terracotta);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    line-height: 1.5;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 6rem 3rem;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+  }
+
+  .section-label::after {
+    content: '';
+    display: block;
+    height: 1.5px;
+    width: 3rem;
+    background: var(--terracotta);
+  }
+
+  /* CASE STUDY CHAPTER HEADER */
+  .case-chapter {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 3rem;
+    margin: 0 -3rem;
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .case-chapter-alt {
+    background: #F5F0EA;
+  }
+
+  .case-chapter-logo {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.85;
+  }
+
+  .case-chapter-name {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 500;
+  }
+
+  .case-chapter-divider {
+    height: 1px;
+    flex: 1;
+    background: var(--border);
+  }
+
+  .case-study-alt {
+    background: #F5F0EA;
+    margin: 0 -3rem;
+    padding: 2.5rem 3rem;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: sticky;
+    top: 6rem;
+  }
+
+  .about-right {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .about-image-col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-image-wrap {
+    width: 200px;
+    aspect-ratio: 3/4;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .about-image-placeholder {
+    display: none;
+    width: 220px;
+    height: 293px;
+    background: var(--terracotta-light);
+    border: 1px dashed var(--terracotta);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+    line-height: 1.5;
+  }
+
+  .about-headline {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 4vw, 3.25rem);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  .about-headline em { font-style: italic; color: var(--terracotta); }
+
+  .about-body p {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+  }
+
+  .about-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.85rem;
+    border: 0.5px solid var(--border);
+    color: var(--ink-soft);
+    border-radius: 100px;
+  }
+
+  /* WORK / CASE STUDIES */
+  .work-intro {
+    max-width: 600px;
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-bottom: 3rem;
+    line-height: 1.7;
+  }
+
+  .case-study {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    padding: 2.5rem 0;
+    border-top: none;
+    transition: opacity 0.2s;
+  }
+
+  .case-chapter {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 3rem;
+    margin: 0 -3rem;
+    border-top: 0.5px solid var(--border);
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .case-study:hover { opacity: 0.8; }
+
+  .case-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .case-number {
+    font-family: var(--serif);
+    font-size: 2rem;
+    color: var(--terracotta);
+    line-height: 1;
+    font-style: italic;
+  }
+
+  .case-tag {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+
+  .case-title {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+
+  .case-desc {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+  }
+
+  .case-placeholder {
+    margin-top: 1.5rem;
+    padding: 2rem;
+    border: 0.5px dashed var(--border);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  .case-body {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .case-section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.5rem;
+  }
+
+  .case-section-text {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.8;
+  }
+
+  .case-strategy-block {
+    background: var(--terracotta-light);
+    border-left: 2px solid var(--terracotta);
+    padding: 1.5rem;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .case-strategy-block .case-section-label { color: var(--terracotta); }
+
+  .case-strategy-block .case-section-text {
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  .case-strategy-headline {
+    font-family: var(--serif);
+    font-size: 1.75rem;
+    line-height: 1.15;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .case-section-headline {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 0.6rem;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* CULTURAL INTELLIGENCE */
+  .ci-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 0.5px solid var(--border);
+    margin-top: 2rem;
+  }
+
+  .ci-card {
+    background: var(--cream);
+    padding: 2.5rem;
+    transition: background 0.2s;
+  }
+
+  .ci-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .ci-card:last-child .ci-evidence-grid {
+    grid-template-columns: repeat(3, 280px);
+  }
+
+  .ci-card:hover { background: var(--terracotta-light); }
+
+  .ci-number {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    color: var(--terracotta);
+    font-style: italic;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .ci-headline {
+    font-family: var(--serif);
+    font-size: 1.3rem;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 1rem;
+    font-style: italic;
+  }
+
+  .ci-body {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+  }
+
+  .ci-sowhat {
+    border-top: 0.5px solid var(--border);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .ci-sowhat-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.4rem;
+  }
+
+  .ci-sowhat-text {
+    font-size: 0.9rem;
+    color: var(--ink);
+    line-height: 1.65;
+    font-weight: 400;
+  }
+
+  .ci-evidence {
+    margin-top: 1.5rem;
+    border-top: 0.5px solid var(--border);
+    padding-top: 1rem;
+  }
+
+  .ci-evidence-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .ci-evidence-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+  }
+
+  .ci-evidence-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .ci-evidence-item img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    border-radius: 2px;
+    display: block;
+    transition: opacity 0.2s;
+  }
+
+  .ci-evidence-item:hover img { opacity: 0.8; }
+
+  .ci-evidence-caption {
+    font-size: 0.68rem;
+    color: var(--terracotta);
+    line-height: 1.4;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  @media (max-width: 768px) {
+    .ci-grid { grid-template-columns: 1fr; }
+  }
+
+  /* WRITING */
+  .writing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .writing-card {
+    padding: 2rem;
+    border: 0.5px solid var(--border);
+    border-radius: 2px;
+    transition: border-color 0.2s, background 0.2s;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .writing-card:hover {
+    border-color: var(--terracotta);
+    background: rgba(244,81,30,0.05);
+  }
+
+  .writing-type {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 0.75rem;
+  }
+
+  .writing-title {
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+
+  .writing-excerpt {
+    font-size: 0.88rem;
+    color: var(--ink-muted);
+    line-height: 1.6;
+  }
+
+  /* CULTURAL OBSERVATIONS */
+  .obs-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1px;
+    background: var(--border);
+    border: 0.5px solid var(--border);
+    margin-top: 1rem;
+  }
+
+  .obs-item {
+    background: var(--cream);
+    padding: 2rem;
+    transition: background 0.2s;
+  }
+
+  .obs-item:hover { background: var(--terracotta-light); }
+
+  .obs-signal {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 1rem;
+  }
+
+  .obs-title {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    line-height: 1.3;
+    margin-bottom: 0.75rem;
+  }
+
+  .obs-body {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.65;
+  }
+
+  /* CONTACT / FOOTER */
+  footer {
+    padding: 5rem 3rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  .footer-cta {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.05;
+    max-width: 600px;
+  }
+
+  .footer-cta em { font-style: italic; color: var(--terracotta); }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.75rem;
+  }
+
+  .footer-link {
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-link:hover { color: var(--terracotta); }
+
+  .footer-bottom {
+    padding: 1.5rem 3rem;
+    border-top: 0.5px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-bottom p {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.05em;
+  }
+
+  /* PAGE SWITCHING */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* Landing page nav buttons */
+  /* LANDING PAGE */
+  .landing-page {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding: 2rem 3rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .landing-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .landing-eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    font-weight: 400;
+    font-family: var(--sans);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .landing-eyebrow:hover { color: var(--terracotta); }
+
+  .landing-links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .landing-nav-btn {
+    background: transparent;
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s;
+    border: none;
+    padding: 0;
+  }
+
+  .landing-nav-btn span { display: none; }
+  .landing-nav-btn:hover { color: var(--terracotta); }
+
+  .landing-name-wrap {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 0;
+  }
+
+  .landing-name {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 8vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    font-weight: 800;
+    margin: 0;
+  }
+
+  .landing-name em {
+    font-style: italic;
+    color: var(--terracotta);
+    display: block;
+  }
+
+  .landing-bottom {
+    padding-bottom: 0.5rem;
+  }
+
+  .landing-title {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    font-weight: 400;
+    font-family: var(--sans);
+    margin-top: 1rem;
+    line-height: 1.5;
+  }
+
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.6s ease both; }
+  .hero-name { animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-descriptor { animation: fadeUp 0.6s 0.2s ease both; }
+
+  /* CONTACT PAGE */
+  .contact-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8rem 3rem 2rem;
+  }
+
+  .contact-body {
+    max-width: 600px;
+  }
+
+  .contact-cta {
+    font-family: var(--serif);
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 1.05;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+  }
+
+  .contact-cta em {
+    font-style: italic;
+    color: var(--terracotta);
+  }
+
+  .contact-desc {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .contact-link {
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color 0.2s;
+    border-bottom: 0.5px solid var(--border);
+    padding-bottom: 1rem;
+  }
+
+  .contact-link:hover { color: var(--terracotta); }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    /* Landing page */
+    .landing-page { padding: 1.5rem; }
+    .landing-name { font-size: clamp(3rem, 16vw, 5rem); }
+    .landing-links { gap: 1rem; }
+    .landing-nav-btn { font-size: 0.65rem; }
+
+    /* Contact */
+    .contact-page { padding: 6rem 1.5rem 2rem; }
+    .contact-cta { font-size: clamp(2.5rem, 10vw, 4rem); }
+
+    /* Nav */
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+
+    /* Sections */
+    .hero { padding: 5rem 1.5rem 3rem; min-height: 50vh; }
+    section { padding: 3rem 1.5rem; }
+
+    /* Hero name — smaller so it fits */
+    .hero-name {
+      font-size: clamp(2.5rem, 16vw, 4rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+
+    /* About — single column, photos side by side and small */
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .about-left { position: static; }
+    .about-right { grid-template-columns: 1fr; gap: 1.5rem; }
+    .about-image-col {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+    .about-image-wrap { width: 100px; flex-shrink: 0; }
+    .about-image-col img[alt="Fez the pug"] { width: 100px; }
+
+    /* Case studies */
+    .case-study { grid-template-columns: 1fr; gap: 1rem; }
+    .case-study-alt { margin: 0 -1.5rem; padding: 2rem 1.5rem; }
+    .case-chapter { margin: 0 -1.5rem; padding: 1rem 1.5rem; }
+    .case-body { gap: 1.5rem; }
+
+    /* CI grid */
+    .ci-grid { grid-template-columns: 1fr; }
+    .ci-card:last-child { grid-column: auto; }
+    .ci-evidence-grid { grid-template-columns: 1fr 1fr !important; }
+
+    /* Writing */
+    .writing-grid { grid-template-columns: 1fr; }
+
+    /* Footer */
+    footer { flex-direction: column; align-items: flex-start; gap: 2rem; padding: 3rem 1.5rem 2rem; }
+    .footer-links { align-items: flex-start; }
+    .footer-bottom { padding: 1.25rem 1.5rem; flex-direction: column; gap: 0.5rem; }
+    .footer-cta { font-size: clamp(1.75rem, 8vw, 3rem); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     EDIT GUIDE — only change text between > and <
+     DO NOT change anything that looks like class="..." or style="..."
+     ============================================================ -->
+
+<!-- NAV — your name as it appears top-left -->
+<nav>
+  <a href="#" class="nav-name" onclick="showPage('home'); return false;">Maddie Jacobson</a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('about'); return false;" href="#">About Me</a></li>
+    <li><a href="#" onclick="showPage('work'); return false;">Case Studies</a></li>
+    <li><a href="#" onclick="showPage('writing'); return false;">Writing</a></li>
+    <li><a href="#" onclick="showPage('contact'); return false;">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ============================================================
+     HOME / LANDING PAGE
+     ============================================================ -->
+<div id="page-home" class="page active">
+  <div class="landing-page">
+    <div class="landing-top">
+      <a href="#" onclick="showPage('home'); return false;" class="landing-eyebrow">Maddie Jacobson</a>
+      <div class="landing-links">
+        <a class="landing-nav-btn" onclick="showPage('about'); return false;" href="#">About Me</a>
+        <a class="landing-nav-btn" onclick="showPage('work'); return false;" href="#">Case Studies</a>
+        <a class="landing-nav-btn" onclick="showPage('writing'); return false;" href="#">Writing</a>
+        <a class="landing-nav-btn" onclick="showPage('contact'); return false;" href="#">Contact</a>
+      </div>
+    </div>
+    <div class="landing-name-wrap">
+      <h1 class="landing-name">Maddie<em>Jacobson</em></h1>
+    </div>
+    <div class="landing-bottom">
+      <p class="landing-title">Almost-therapist turned brand strategist</p>
+      <p style="font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.4rem; font-family: var(--sans);">Los Angeles, CA</p>
+      <p style="font-size: 0.8rem; color: var(--ink-muted); margin-top: 0.2rem; font-family: var(--sans);">Currently strategizing at VaynerMedia</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     ABOUT PAGE
+     ============================================================ -->
+<div id="page-about" class="page">
+<section id="about">
+  
+  <p class="section-label">About Me</p>
+  <div class="about-grid">
+    <div class="about-left">
+      <!-- EDIT: the large headline. <br> = line break, <em> = italic orange -->
+      <h2 class="about-headline">Born in social.<br><em>Trained in people.</em><br>Fluent in culture.</h2>
+      <div class="about-tags">
+        <!-- EDIT: add, remove, or rename skill tags -->
+        <span class="tag">Brand Strategy</span>
+        <span class="tag">Cultural Intelligence</span>
+        <span class="tag">Consumer Insight</span>
+        <span class="tag">Social Strategy</span>
+        <span class="tag">Psychology</span>
+      </div>
+    </div>
+    <div class="about-right">
+      <div class="about-image-col">
+        <!-- EDIT: your photo -->
+        <div class="about-image-wrap">
+          <img src="https://i.imgur.com/kYZ3rCW.jpg" alt="Maddie Jacobson" class="about-image">
+        </div>
+        <!-- Fez photo -->
+        <div style="margin-top: 0.75rem;">
+          <img src="https://i.imgur.com/LjG9tJS.jpg" alt="Fez the pug" style="width: 200px; border-radius: 2px; display: block;">
+          <p style="font-size: 0.7rem; color: var(--ink-muted); margin-top: 0.35rem; letter-spacing: 0.04em;">(that's Fez)</p>
+        </div>
+      </div>
+      <div class="about-body">
+        <!-- EDIT: your bio paragraphs -->
+        <p>I'm a brand strategist born in social. A therapist in another life. And a cultural anthropologist at heart.</p>
+        <p>I've learned that the real story isn't in what people say, but rather in what they do.</p>
+        <p>With a background in psychology, I'm trained to look past surface-level answers and understand the motivations underneath. Working in social sharpened that instinct, giving me a front-row seat to how those motivations play out in real time and where the tension points in culture start to emerge.</p>
+        <p>I'm especially interested in the gap between what people feel and what they actually say out loud, and how that gap shows up in the way people talk about brands.</p>
+        <p>When I'm not working, you'll find me hanging with my dog, Fez, making some sort of craft or DIY, or trying out a new restaurant.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     STRATEGIC CASE STUDIES PAGE
+     ============================================================ -->
+</section>
+</div>
+
+<div id="page-work" class="page">
+<section id="work">
+  
+  <p class="section-label">Strategic Case Studies</p>
+
+  <!-- CHAPTER HEADER: Barefoot -->
+  <div class="case-chapter">
+    <img src="https://i.imgur.com/gAWiMWi.png" alt="Barefoot Wines" class="case-chapter-logo">
+    <span class="case-chapter-name">Barefoot Wines</span>
+    <div class="case-chapter-divider"></div>
+  </div>
+
+  <!-- CASE STUDY 01 — Barefoot -->
+  <div class="case-study">
+    <div class="case-meta">
+      <span class="case-number">01</span>
+      <span class="case-tag">Brand Strategy</span>
+    </div>
+    <div>
+      <h3 class="case-title">How can a wine brand with a reputation problem win in a declining category?</h3>
+      <!-- EDIT: the answer / strategic provocation -->
+      <p class="case-desc">Stop apologizing for being cheap. Start championing every occasion that doesn't need a fancy bottle.</p>
+      <!-- EDIT: what you actually did on this project -->
+      <p class="case-desc" style="margin-top: 0.5rem; font-size: 0.85rem; color: var(--ink-muted);">Built monthly cultural intelligence decks — drawing from social, Mintel, and cultural observation — presented directly to the Barefoot client and fed back into creative briefs.</p>
+
+      <div class="case-body">
+        <!-- Each block = one section. Pattern: label → headline → body text -->
+
+        <div>
+          <!-- EDIT: section category label -->
+          <p class="case-section-label">The Problem</p>
+          <!-- EDIT: leading insight headline -->
+          <p class="case-section-headline">Gen Z is drinking less because they feel like they have fewer reasons to drink.</p>
+          <!-- EDIT: body copy -->
+          <p class="case-section-text">Barefoot sits in a crowded, shrinking category. Gen Z drinks less than any generation before them — driven by the sober-curious movement, cannabis, and fewer reasons to gather. And within that declining market, Barefoot carries an extra burden: the reputation of cheap wine for people who don't know better.</p>
+        </div>
+
+        <div>
+          <p class="case-section-label">Cultural Tension</p>
+          <p class="case-section-headline">Gen Z is redefining what counts as a special occasion.</p>
+          <p class="case-section-text">Traditional milestones are fading. In their place, Gen Z is inventing their own — Nowhere To Wear It parties, Presentation Nights, couch hangs elevated to events. Economic uncertainty pushed them home, and they turned it into a culture: hyper-specific, deeply personal, and entirely self-made.</p>
+        </div>
+
+        <div>
+          <p class="case-section-label">Category Tension</p>
+          <p class="case-section-headline">The wine category abandoned the everyday, even as everyday moments became the only ones worth celebrating.</p>
+          <p class="case-section-text">As Gen Z redefines celebration, wine brands are doubling down on aspiration — chasing premium occasions like the picnic, the bachelorette, the anniversary dinner — trying to shed the "cheap" label by attaching themselves to moments that feel worthy of a nice bottle. But in doing so, they've abandoned the everyday entirely. No one is owning the unspecial moments that define Gen Z.</p>
+        </div>
+
+        <!-- STRATEGY BLOCK — highlighted in terracotta, always goes last -->
+        <div class="case-strategy-block">
+          <p class="case-section-label">The Strategy</p>
+          <!-- EDIT: your big strategy headline -->
+          <p class="case-strategy-headline">Proudly own the Unspecial Occasion.</p>
+          <!-- EDIT: supporting strategy copy -->
+          <p class="case-section-text">Emptying the lint tray. Everyone hearted your group text. The friend who showed up with snacks, unprompted. These aren't accidents — they're the moments Gen Z is actually living in. While the category chases occasions worth dressing up for, Barefoot should own every occasion that isn't. Make any moment a Barefoot moment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHAPTER HEADER: Brita -->
+  <div class="case-chapter case-chapter-alt">
+    <img src="https://i.imgur.com/ViYDogV.png" alt="Brita" class="case-chapter-logo">
+    <span class="case-chapter-name">Brita</span>
+    <div class="case-chapter-divider"></div>
+  </div>
+
+  <!-- CASE STUDY 02 — Brita -->
+  <div class="case-study case-study-alt">
+    <div class="case-meta">
+      <span class="case-number">02</span>
+      <span class="case-tag">Brand Strategy</span>
+    </div>
+    <div>
+      <h3 class="case-title">How does a filtration brand earn cultural relevance with a generation that filters nothing?</h3>
+      <p class="case-desc">Gen Z doesn't filter their feelings. Only their water.</p>
+
+      <div class="case-body">
+
+        <div>
+          <p class="case-section-label">Observation</p>
+          <p class="case-section-headline">Gen Z has made oversharing an art form.</p>
+          <p class="case-section-text">Gen Z operates on radical authenticity, seen in everything from therapy speak to public trauma dumping. To them, filtering yourself isn't just uncool, it's fake. And that's something they have zero patience for.</p>
+        </div>
+
+        <div>
+          <p class="case-section-label">Insight</p>
+          <p class="case-section-headline">Gen Z doesn't filter their feelings. Only their water.</p>
+          <p class="case-section-text">In a category obsessed with purity and perfection, Brita found an opening in a culture that rejects filtering altogether, becoming the one filter people would actually claim.</p>
+        </div>
+
+        <!-- Images sitting full width between insight and expression -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+          <a href="https://www.instagram.com/reel/DYFs-0xJF3D/" target="_blank" style="display: block;">
+            <img src="https://i.imgur.com/cGvTn0D.jpg" alt="Dat's A Filter Baby" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 2px; display: block; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+          </a>
+          <a href="https://www.instagram.com/reel/DVwU55Ajzog/" target="_blank" style="display: block;">
+            <img src="https://i.imgur.com/4gWTLQY.jpg" alt="Dat's A Filter Baby" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 2px; display: block; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">
+          </a>
+        </div>
+
+        <div class="case-strategy-block">
+          <p class="case-section-label">Expression</p>
+          <p class="case-strategy-headline">Dat's A Filter Baby</p>
+          <p class="case-section-text">A song built around the one filter worth keeping — landing the brand inside a cultural truth rather than a product claim.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CULTURAL INTELLIGENCE (part of Strategic Case Studies)
+     ============================================================ -->
+<section id="cultural-intelligence">
+  <p class="section-label">Cultural Intelligence — Barefoot Wines</p>
+  <p class="work-intro">As part of a brand intelligence report for Barefoot Wines, I tracked cultural signals across categories to identify emerging opportunities for the brand.</p>
+
+  <div class="ci-grid">
+
+    <!-- SIGNAL 01 -->
+    <div class="ci-card">
+      <p class="ci-number">01</p>
+      <h3 class="ci-headline">Death of the Dinner Table</h3>
+      <p class="ci-body">For Gen Z in 2024, snacking isn't just about eating between meals — it's a lifestyle shift where snacks often replace traditional meals entirely. Valuing "little treats" as everyday indulgences, they want small, satisfying bites that offer moments of joy throughout the day. Sippable treats — smoothies, coffees, and milkshakes — have become snacks in their own right, offering quick, easy enjoyment. This continued shift reflects a broader trend toward flexible, casual eating where convenience and small moments of enjoyment lead the way, allowing activities to dictate meals rather than the reverse.</p>
+      <div class="ci-sowhat">
+        <p class="ci-sowhat-label">So What</p>
+        <p class="ci-sowhat-text">As meals become simpler and more focused on casual convenience, fit into these snackified moments — offering an approachable, enjoyable pairing for Gen Z's little treats throughout the day.</p>
+      </div>
+      <div class="ci-evidence">
+        <p class="ci-evidence-label">Cross-category indicators</p>
+        <div class="ci-evidence-grid">
+          <a href="https://www.tiktok.com/@kellygracemae/video/7413515743922294047?q=couch%20eating%20dinner&t=1726711354788" class="ci-evidence-item" target="_blank">
+            <img src="https://i.imgur.com/eqIBAOt.jpg" alt="TV dinner on the rise">
+            <span class="ci-evidence-caption">the rise of tv dinners</span>
+          </a>
+          <a href="https://www.tiktok.com/@chzgal/video/7418020355954035998?_r=1&_t=8rENMsGCgN5" class="ci-evidence-item" target="_blank">
+            <img src="https://i.imgur.com/rKS0pUy.jpg" alt="Girl dinner is just snacktime">
+            <span class="ci-evidence-caption">girl dinner is just snacktime</span>
+          </a>
+          <a href="https://www.tiktok.com/@kendrannelson/video/7388601181624438046?_r=1&_t=8rL0KOoHQTe" class="ci-evidence-item" target="_blank">
+            <img src="https://i.imgur.com/JugyAnr.jpg" alt="Getting yourself a little treat is self care">
+            <span class="ci-evidence-caption">getting yourself a little treat is self care</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGNAL 02 -->
+    <div class="ci-card">
+      <p class="ci-number">02</p>
+      <h3 class="ci-headline">Fun Has A Whole New Meaning For Gen Z</h3>
+      <p class="ci-body">For Gen Z, fun has shifted from packed clubs to more intentional, meaningful gatherings rooted in shared interests and connections. They're gravitating toward spaces that offer depth — like chess clubs, run clubs, and fan communities — where they can bond over common passions. Wine bars are a natural extension of this mindset: Gen Z appreciates the relaxed, social vibe, enjoying the slow pace of savoring wine in a stylish setting. Whether connecting over their favorite artists or hobbies, it's not just about the activity or the wine itself — it's about creating a welcoming, curated atmosphere for shared experiences that feel intimate, inclusive, and authentic.</p>
+      <div class="ci-sowhat">
+        <p class="ci-sowhat-label">So What</p>
+        <p class="ci-sowhat-text">Bring the wine bar vibe home. Since Gen Z loves the relaxed social atmosphere of wine bars and values the comfort of at-home gatherings, Barefoot can deliver that connected experience right in their living rooms.</p>
+      </div>
+      <div class="ci-evidence">
+        <p class="ci-evidence-label">Cross-category indicators</p>
+        <div class="ci-evidence-grid" style="grid-template-columns: repeat(2, 1fr);">
+          <a href="https://www.latimes.com/lifestyle/story/2024-04-25/la-chess-club-is-how-los-angeles-gen-z-and-millennials-are-finding-community-and-dates" class="ci-evidence-item" target="_blank">
+            <img src="https://i.imgur.com/JburGBO.jpg" alt="A new kind of club">
+            <span class="ci-evidence-caption">a new kind of club</span>
+          </a>
+          <a href="https://www.tiktok.com/@kiripaul/video/7339074493136080161?_r=1&_t=8rEQ51i5jyh" class="ci-evidence-item" target="_blank">
+            <img src="https://i.imgur.com/dJURK5d.jpg" alt="Growing popularity of wine bars">
+            <span class="ci-evidence-caption">growing popularity of wine bars</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGNAL 03 -->
+    <div class="ci-card">
+      <p class="ci-number">03</p>
+      <h3 class="ci-headline">Value Brands Are Having A Major Moment</h3>
+      <p class="ci-body">As Americans remain concerned about inflation, some brands are stepping up as champions of affordability, responding to what people really need and want right now. The appeal of ease and simplicity is making a comeback, with brands tapping into the love for a good deal and laid-back vibe. AriZona Iced Tea, Costco, and Chili's are rising in popularity by delivering on value, consistency, and approachability.</p>
+      <div class="ci-sowhat">
+        <p class="ci-sowhat-label">So What</p>
+        <p class="ci-sowhat-text">With many Americans viewing rising costs as a top concern, now is the perfect time for Barefoot to spotlight its affordable, accessible appeal.</p>
+      </div>
+      <div class="ci-evidence">
+        <p class="ci-evidence-label">Cross-category indicators</p>
+        <div class="ci-evidence-grid">
+          <a href="https://www.instagram.com/p/C82W1s6MUKL/" class="ci-evidence-item" target="_blank">
+            <img src="https://i.imgur.com/l8MekXM.jpg" alt="AriZona is proudly $0.99">
+            <span class="ci-evidence-caption">AriZona is proudly $0.99</span>
+          </a>
+          <a href="https://www.instagram.com/p/C_3Q_KavYza/?igsh=MTc4MmM1YmI2Ng%3D%3D" class="ci-evidence-item" target="_blank">
+            <img src="https://i.imgur.com/q6EQQCo.jpg" alt="MiddleClassFancy">
+            <span class="ci-evidence-caption">@MiddleClassFancy satirizes and celebrates the good ol' American vibe</span>
+          </a>
+          <a href="https://www.instagram.com/p/C-D7HzByYri/?img_index=1" class="ci-evidence-item" target="_blank">
+            <img src="https://i.imgur.com/9VLPgWJ.jpg" alt="Chili's keeps it self aware and casual">
+            <span class="ci-evidence-caption">Chili's keeps it self aware and casual</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </div>
+</section>
+</div>
+
+<!-- ============================================================
+     WRITING PAGE
+     ============================================================ -->
+<div id="page-writing" class="page">
+<section id="writing">
+  
+  <p class="section-label">Writing</p>
+  <div class="writing-grid">
+
+    <!-- EDIT: add more cards by copying an <a class="writing-card"> block -->
+    <a href="https://maddiejacobson.substack.com/p/why-everything-is-getting-more-whimsical" class="writing-card" target="_blank">
+      <p class="writing-type">Substack</p>
+      <h3 class="writing-title">Why Everything Is Getting More Whimsical</h3>
+      <p class="writing-excerpt">On whimsymaxxing and the cultural shift toward romanticizing everyday life</p>
+    </a>
+
+    <a href="https://maddiejacobson.substack.com/p/theres-a-theory-for-everything-now" class="writing-card" target="_blank">
+      <p class="writing-type">Substack</p>
+      <h3 class="writing-title">There's A Theory For Everything Now</h3>
+      <p class="writing-excerpt">We've spent so much time over-analyzing and over-explaining that we've lost the plot</p>
+    </a>
+
+    <a href="https://maddiejacobson.substack.com/p/the-case-for-looking-up" class="writing-card" target="_blank">
+      <p class="writing-type">Substack</p>
+      <h3 class="writing-title">The Case for Looking Up</h3>
+      <p class="writing-excerpt">A reminder your algorithm isn't reality</p>
+    </a>
+
+  </div>
+</section>
+</div>
+
+<!-- ============================================================
+     CONTACT PAGE
+     ============================================================ -->
+<div id="page-contact" class="page">
+  <div class="contact-page">
+    <div class="contact-body">
+      <p class="section-label">Contact</p>
+      <h2 class="contact-cta"><em>Let's chat.</em></h2>
+      <p class="contact-desc">I'm always open to new opportunities, collaborations, and conversations about culture, strategy, and everything in between.</p>
+      <div class="contact-links">
+        <a href="mailto:maddiecjacobson@gmail.com" class="contact-link">Email →</a>
+        <a href="https://www.linkedin.com/in/maddie-jacobson-b598b21a2/" class="contact-link" target="_blank">LinkedIn →</a>
+        <a href="https://substack.com/@maddiejacobson" class="contact-link" target="_blank">Substack →</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Maddie Jacobson — Brand Strategist</p>
+      <p>Los Angeles, CA</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const topNav = document.querySelector('nav');
+  topNav.style.display = 'none';
+
+  function showPage(id) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('page-' + id).classList.add('active');
+    window.scrollTo(0, 0);
+    topNav.style.display = id === 'home' ? 'none' : 'flex';
+  }
+</script>
+
+</body>
+</html>
